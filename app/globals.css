@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-bg {
+  background: linear-gradient(135deg, rgba(30, 167, 253, 0.75) 0%, rgba(255, 77, 109, 0.8) 100%),
+    url("https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.schedule-connector {
+  position: absolute;
+  top: 100%;
+  width: 140px;
+  height: 6px;
+  background: #fa5252;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.12);
+  transform-origin: 0 0;
+  pointer-events: none;
+}
+
+/* left card: starts exactly at its bottom-right corner, runs down-right under the next (right) card */
+.schedule-connector--left {
+  left: 100%;
+  transform: rotate(35deg);
+}
+
+/* right card: starts exactly at its bottom-left corner, runs down-left under the next (left) card */
+.schedule-connector--right {
+  left: 0;
+  transform: rotate(145deg);
+}
