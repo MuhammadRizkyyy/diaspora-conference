@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="relative bg-gray-100">
@@ -43,20 +45,16 @@ export default function Footer() {
           </nav>
 
           <div className="w-full border-t border-gray-300/60 mt-8 pt-10">
-            <a className="flex items-center justify-center gap-1.5 text-brand-coral font-black text-2xl tracking-tight" href="#home">
-              <span className="w-7 h-7 rounded-full bg-brand-coral text-white flex items-center justify-center font-bold text-sm shadow">
-                ID
+            <a className="flex items-center justify-center gap-2.5 text-brand-navy" href="#home">
+              <Image src="/logo.png" alt="IDN Diaspora Business Summit" width={36} height={36} className="shrink-0" />
+              <span className="leading-tight text-left font-black text-base tracking-tight">
+                IDN Diaspora
+                <br />
+                Business Summit
               </span>
-              <span>summit</span>
             </a>
 
             <div className="flex justify-center gap-3 mt-6">
-              <a
-                className="w-10 h-10 rounded-md bg-sky-400 hover:bg-sky-500 text-white flex items-center justify-center text-sm transition"
-                href="#"
-              >
-                <i className="fa-brands fa-x-twitter"></i>
-              </a>
               <a
                 className="w-10 h-10 rounded-md bg-sky-400 hover:bg-sky-500 text-white flex items-center justify-center text-sm transition"
                 href="#"

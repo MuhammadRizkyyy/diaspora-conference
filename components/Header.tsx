@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const NAV = [
@@ -28,13 +29,31 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-        <Link className="flex items-center gap-2 text-brand-navy font-black text-2xl tracking-tight" href="#home">
-          <i className="fa-solid fa-location-dot text-brand-coral text-2xl"></i>
-          <span>summit</span>
+        <Link
+          className="flex items-center gap-2.5 text-brand-navy"
+          href="#home"
+        >
+          <Image
+            src="/logo.png"
+            alt="IDN Diaspora Business Summit"
+            width={36}
+            height={36}
+            className="shrink-0"
+          />
+
+          <span className="leading-tight text-left font-black text-base tracking-tight">
+            IDN Diaspora
+            <br />
+            Business Summit
+          </span>
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm font-semibold text-brand-navy">
           {NAV.map((item) => (
-            <a key={item.href} className="hover:text-brand-coral transition" href={item.href}>
+            <a
+              key={item.href}
+              className="hover:text-brand-coral transition"
+              href={item.href}
+            >
               {item.label}
             </a>
           ))}

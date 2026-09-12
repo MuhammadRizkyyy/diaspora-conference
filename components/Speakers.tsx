@@ -86,9 +86,6 @@ export default function Speakers() {
                   Photo and biography details will be shown after final confirmation from the ministry.
                 </p>
                 <div className="flex gap-2">
-                  <a className="w-7 h-7 rounded-full bg-sky-400 text-white flex items-center justify-center text-xs" href="#">
-                    <i className="fa-brands fa-x-twitter"></i>
-                  </a>
                   <a className="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs" href="#">
                     <i className="fa-brands fa-linkedin-in"></i>
                   </a>
