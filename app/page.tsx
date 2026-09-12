@@ -4,7 +4,7 @@ import RegisterBar from "@/components/RegisterBar";
 import About from "@/components/About";
 import WhatWeOffer from "@/components/WhatWeOffer";
 import Agenda from "@/components/Agenda";
-import Packages from "@/components/Packages";
+import { GrowthPlans } from "@/components/GrowthPlans";
 import Speakers from "@/components/Speakers";
 import Sponsors from "@/components/Sponsors";
 import Contact from "@/components/Contact";
@@ -19,7 +19,7 @@ export default function Home() {
       <About />
       <WhatWeOffer />
       <Agenda />
-      <Packages />
+      <GrowthPlans />
       <Speakers />
       <Sponsors />
       <Contact />
