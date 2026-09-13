@@ -13,14 +13,17 @@ const TIERS_ROW2 = [
   { icon: "fa-user-group", label: "Corporate 5 Pax · Rp 50 Jt" },
 ];
 
-function useReveal<T extends HTMLElement>(threshold = 0.2) {
+function useReveal<T extends HTMLElement>(threshold = 0.1) {
   const ref = useRef<T>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const observer = new IntersectionObserver(([entry]) => setVisible(entry.isIntersecting), { threshold });
+    const observer = new IntersectionObserver(([entry]) => setVisible(entry.isIntersecting), {
+      threshold,
+      rootMargin: "0px 0px -10% 0px",
+    });
     observer.observe(el);
     return () => observer.disconnect();
   }, [threshold]);

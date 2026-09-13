@@ -21,7 +21,8 @@ export default function Speakers() {
     const el = headerRef.current;
     if (!el) return;
     const observer = new IntersectionObserver(([entry]) => setHeaderVisible(entry.isIntersecting), {
-      threshold: 0.3,
+      threshold: 0.15,
+      rootMargin: "0px 0px -10% 0px",
     });
     observer.observe(el);
     return () => observer.disconnect();
@@ -40,7 +41,7 @@ export default function Speakers() {
           });
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.1, rootMargin: "0px 0px -10% 0px" }
     );
     cardRefs.current.forEach((el) => el && observer.observe(el));
     return () => observer.disconnect();
