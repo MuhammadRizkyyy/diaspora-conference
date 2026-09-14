@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { basePath } from "@/lib/utils";
 
 const NAV = [
   { href: "#home", label: "Home" },
@@ -34,7 +35,7 @@ export default function Header() {
           href="#home"
         >
           <Image
-            src="/logo.png"
+            src={`${basePath}/logo.png`}
             alt="IDN Diaspora Business Summit"
             width={36}
             height={36}

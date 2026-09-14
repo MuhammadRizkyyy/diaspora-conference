@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { basePath } from "@/lib/utils";
 
 export default function Footer() {
   return (
@@ -46,7 +47,7 @@ export default function Footer() {
 
           <div className="w-full border-t border-gray-300/60 mt-8 pt-10">
             <a className="flex items-center justify-center gap-2.5 text-brand-navy" href="#home">
-              <Image src="/logo.png" alt="IDN Diaspora Business Summit" width={36} height={36} className="shrink-0" />
+              <Image src={`${basePath}/logo.png`} alt="IDN Diaspora Business Summit" width={36} height={36} className="shrink-0" />
               <span className="leading-tight text-left font-black text-base tracking-tight">
                 IDN Diaspora
                 <br />

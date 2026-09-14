@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { basePath } from "@/lib/utils";
 
 const FEATURES = [
   "Meet Ministers & Industry Leaders",
@@ -37,7 +38,7 @@ export default function WelcomeModal() {
         </button>
 
         <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-brand-coral/40 shadow-[0_0_40px_10px_rgba(250,82,82,0.5)]">
-          <Image src="/logo.png" alt="" width={56} height={56} />
+          <Image src={`${basePath}/logo.png`} alt="" width={56} height={56} />
         </div>
 
         <h2 className="mb-6 text-2xl font-black leading-tight text-white">
