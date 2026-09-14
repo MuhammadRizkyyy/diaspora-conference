@@ -45,26 +45,3 @@
   background-size: cover;
   background-position: center;
 }
-
-.schedule-connector {
-  position: absolute;
-  top: 100%;
-  width: 140px;
-  height: 6px;
-  background: #d4af37;
-  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.12);
-  transform-origin: 0 0;
-  pointer-events: none;
-}
-
-/* left card: starts exactly at its bottom-right corner, runs down-right under the next (right) card */
-.schedule-connector--left {
-  left: 100%;
-  transform: rotate(35deg);
-}
-
-/* right card: starts exactly at its bottom-left corner, runs down-left under the next (left) card */
-.schedule-connector--right {
-  left: 0;
-  transform: rotate(145deg);
-}

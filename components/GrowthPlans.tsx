@@ -13,8 +13,8 @@ const TABS = [
     label: "Full Corporate",
     plans: [
       {
-        name: "Full Corporate Package (10 pax)",
-        note: "Available for 3 packages only",
+        name: "Full Corporate Package",
+        note: "10 pax · Available for 3 packages only",
         price: 100000000,
         perPerson: false,
         features: [
@@ -30,8 +30,8 @@ const TABS = [
     label: "Half Corporate",
     plans: [
       {
-        name: "Half Corporate Package (5 pax)",
-        note: "Available for 4 packages only",
+        name: "Half Corporate Package",
+        note: "5 pax · Available for 4 packages only",
         price: 50000000,
         perPerson: false,
         features: [
@@ -55,7 +55,7 @@ const TABS = [
       },
       {
         name: "Summit Only / Gala Dinner Only",
-        note: null,
+        note: "Summit or Gala Dinner",
         price: 2000000,
         perPerson: true,
         features: ["One seat at the Summit or one seat at the Gala Dinner", "Networking lunch or dinner"],
@@ -131,9 +131,9 @@ export const GrowthPlans = () => {
               className="flex flex-col overflow-hidden rounded-2xl border border-brand-gold/70 bg-brand-ink text-left shadow-xl"
             >
               <div className="bg-gradient-to-br from-brand-gold via-brand-gold-dark to-brand-charcoal px-5 pt-5 pb-5 text-center">
-                <div className="inline-block rounded-lg bg-brand-charcoal px-4 py-2">
-                  <h4 className="text-base md:text-lg font-bold text-brand-gold">{plan.name}</h4>
-                  {plan.note && <p className="text-[11px] italic text-white/80">{plan.note}</p>}
+                <div className="flex min-h-[4.5rem] flex-col justify-center rounded-lg bg-brand-charcoal px-4 py-2.5">
+                  <h4 className="text-base md:text-lg font-bold leading-tight text-balance text-brand-gold">{plan.name}</h4>
+                  <p className="mt-1 text-[11px] font-medium uppercase tracking-wider text-white/60">{plan.note}</p>
                 </div>
                 <div className="mt-4 flex flex-wrap items-baseline justify-center gap-x-1 font-black text-white">
                   <span className="text-lg md:text-xl">Rp</span>
