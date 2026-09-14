@@ -1,44 +1,43 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { Check } from "lucide-react";
 import NumberFlow from "@number-flow/react";
 
-import { cn } from "@/lib/utils";
+import { cn, MEGATIX_URL } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 const PLANS = [
   {
-    name: "Summit Only",
-    description: "Full-day Summit sessions",
-    price: 2000000,
+    name: "Individual",
+    description: "Full Access · per person",
+    price: 3500000,
     features: [
-      "Full Summit access",
-      "Business matching session",
-      "E-ticket + QR check-in",
+      "One seat at the Summit and the Gala Dinner",
+      "Networking lunch, coffee break, and dinner",
     ],
   },
   {
-    name: "Full Access",
-    description: "Summit + Gala Dinner",
-    price: 3500000,
+    name: "Half Corporate Package",
+    description: "5 pax · Available for 4 packages only",
+    price: 50000000,
     features: [
-      "Full Summit access",
-      "Gala Dinner",
-      "Business matching session",
-      "E-ticket + QR check-in",
+      "VIP seats for 5 pax at the Summit and the Gala Dinner",
+      "Max 2 representatives per company at each VIP table",
+      "Company profile in the photobooth",
+      "Networking lunch, coffee break, and dinner",
     ],
     featured: true,
   },
   {
-    name: "Gala Dinner Only",
-    description: "Evening reception only",
-    price: 2000000,
+    name: "Full Corporate Package",
+    description: "10 pax · Available for 3 packages only",
+    price: 100000000,
     features: [
-      "Gala Dinner access",
-      "Evening networking",
-      "E-ticket + QR check-in",
+      "Seats for 10 pax at the Summit and the Gala Dinner",
+      "Max 2 representatives per company at each VIP table",
+      "Company profile in the photobooth",
+      "Networking lunch, coffee break, and dinner",
     ],
   },
 ];
@@ -108,7 +107,7 @@ export const GrowthPlans = () => {
                     : "bg-transparent border border-brand-gold/60 text-brand-gold hover:bg-brand-gold/10",
                 )}
               >
-                <Link href="/register">Select Plan</Link>
+                <a href={MEGATIX_URL}>Get Ticket</a>
               </Button>
 
               <div className="space-y-4 pt-8 border-t border-white/10 text-left">

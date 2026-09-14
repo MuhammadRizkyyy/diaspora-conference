@@ -1,4 +1,5 @@
 import Countdown from "./Countdown";
+import { MEGATIX_URL } from "@/lib/utils";
 
 export default function Hero() {
   return (
@@ -15,7 +16,7 @@ export default function Hero() {
 
         <a
           className="inline-block px-9 py-3.5 rounded-full bg-brand-gold hover:bg-brand-gold-light text-brand-charcoal font-semibold text-base shadow-md transition"
-          href="#agenda"
+          href={MEGATIX_URL}
         >
           Get Ticket <i className="fa-solid fa-arrow-right ml-1.5 text-sm"></i>
         </a>

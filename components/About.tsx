@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { MEGATIX_URL } from "@/lib/utils";
 
 export default function About() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -18,7 +19,7 @@ export default function About() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="pt-28 pb-24 bg-white" id="about">
+    <section ref={sectionRef} className="py-24 bg-white" id="about">
       <div
         className={`max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center transition-all duration-[1400ms] ease-out ${
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -79,7 +80,7 @@ export default function About() {
           </p>
           <a
             className="inline-flex items-center px-7 py-3.5 rounded-lg bg-brand-gold hover:bg-brand-gold-light text-brand-charcoal text-base font-semibold transition"
-            href="#agenda"
+            href={MEGATIX_URL}
           >
             Get Ticket
           </a>

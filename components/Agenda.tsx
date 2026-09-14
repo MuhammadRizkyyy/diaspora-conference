@@ -118,7 +118,7 @@ export default function Agenda() {
           <div className="text-center mt-12">
             <a
               className="inline-flex items-center px-7 py-3 rounded-full bg-brand-gold hover:bg-brand-gold-light text-brand-charcoal text-sm font-semibold shadow transition"
-              href="/register"
+              href="#packages"
             >
               Book A Seat <i className="fa-solid fa-arrow-right ml-2"></i>
             </a>

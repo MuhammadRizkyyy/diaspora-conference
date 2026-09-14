@@ -62,7 +62,7 @@ export default function Header() {
         <div>
           <Link
             className="inline-flex items-center px-6 py-2.5 rounded-full bg-brand-gold hover:bg-brand-gold-light text-brand-charcoal text-sm font-semibold shadow-lg transition duration-200"
-            href="/register"
+            href="#packages"
           >
             Join Now <i className="fa-solid fa-arrow-right ml-2 text-xs"></i>
           </Link>

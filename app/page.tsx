@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import RegisterBar from "@/components/RegisterBar";
 import About from "@/components/About";
 import WhatWeOffer from "@/components/WhatWeOffer";
 import Agenda from "@/components/Agenda";
@@ -15,7 +14,6 @@ export default function Home() {
     <>
       <Header />
       <Hero />
-      <RegisterBar />
       <About />
       <WhatWeOffer />
       <Agenda />

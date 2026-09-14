@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { basePath } from "@/lib/utils";
 
@@ -56,12 +55,13 @@ export default function WelcomeModal() {
           ))}
         </ul>
 
-        <Link
-          href="/register"
+        <a
+          href="#packages"
+          onClick={() => setOpen(false)}
           className="mb-4 flex w-full items-center justify-center gap-2 rounded-full bg-brand-gold py-4 text-base font-bold text-brand-charcoal transition hover:bg-brand-gold-light"
         >
           REGISTER NOW <i className="fa-solid fa-arrow-right"></i>
-        </Link>
+        </a>
 
         <button
           className="text-sm text-white/70 underline"
