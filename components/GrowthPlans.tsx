@@ -94,7 +94,7 @@ export const GrowthPlans = () => {
         <div
           role="tablist"
           aria-label="Package type"
-          className="inline-flex flex-wrap justify-center gap-1 rounded-full border border-brand-gold/30 bg-brand-ink p-1.5 mb-12"
+          className="inline-flex flex-wrap justify-center gap-1 rounded-full border border-brand-gold/30 bg-brand-ink p-1.5 mb-10"
         >
           {TABS.map((tab) => (
             <button
@@ -122,39 +122,39 @@ export const GrowthPlans = () => {
           aria-labelledby={`tab-${active.id}`}
           className={cn(
             "mx-auto grid gap-6 animate-in fade-in slide-in-from-bottom-2 duration-500",
-            active.plans.length > 1 ? "max-w-5xl md:grid-cols-2" : "max-w-2xl",
+            active.plans.length > 1 ? "max-w-3xl md:grid-cols-2" : "max-w-md",
           )}
         >
           {active.plans.map((plan) => (
             <div
               key={plan.name}
-              className="flex flex-col overflow-hidden rounded-2xl border-2 border-brand-gold/70 bg-brand-ink text-left shadow-2xl"
+              className="flex flex-col overflow-hidden rounded-2xl border border-brand-gold/70 bg-brand-ink text-left shadow-xl"
             >
-              <div className="bg-gradient-to-br from-brand-gold via-brand-gold-dark to-brand-charcoal px-6 pt-6 pb-7 text-center">
-                <div className="inline-block rounded-xl bg-brand-charcoal px-5 py-2.5">
-                  <h4 className="text-lg md:text-2xl font-bold text-brand-gold">{plan.name}</h4>
-                  {plan.note && <p className="text-xs italic text-white/80">{plan.note}</p>}
+              <div className="bg-gradient-to-br from-brand-gold via-brand-gold-dark to-brand-charcoal px-5 pt-5 pb-5 text-center">
+                <div className="inline-block rounded-lg bg-brand-charcoal px-4 py-2">
+                  <h4 className="text-base md:text-lg font-bold text-brand-gold">{plan.name}</h4>
+                  {plan.note && <p className="text-[11px] italic text-white/80">{plan.note}</p>}
                 </div>
-                <div className="mt-5 flex flex-wrap items-baseline justify-center gap-x-1 font-black text-white">
-                  <span className="text-2xl md:text-3xl">Rp</span>
-                  <NumberFlow value={plan.price} locales="id-ID" className="text-4xl md:text-5xl" />
-                  {plan.perPerson && <span className="text-xl md:text-2xl uppercase">/person</span>}
+                <div className="mt-4 flex flex-wrap items-baseline justify-center gap-x-1 font-black text-white">
+                  <span className="text-lg md:text-xl">Rp</span>
+                  <NumberFlow value={plan.price} locales="id-ID" className="text-3xl md:text-4xl" />
+                  {plan.perPerson && <span className="text-sm md:text-base uppercase">/person</span>}
                 </div>
               </div>
 
-              <ul className="flex-1 space-y-3 p-6 md:p-8">
+              <ul className="flex-1 space-y-2.5 p-5 md:p-6">
                 {plan.features.map((f) => (
-                  <li key={f} className="flex gap-3 text-sm leading-relaxed text-white/80">
+                  <li key={f} className="flex gap-2.5 text-sm leading-relaxed text-white/80">
                     <Check className="mt-0.5 size-4 shrink-0 text-brand-gold" />
                     {f}
                   </li>
                 ))}
               </ul>
 
-              <div className="px-6 pb-6 md:px-8 md:pb-8">
+              <div className="px-5 pb-5 md:px-6 md:pb-6">
                 <Button
                   asChild
-                  className="w-full h-14 rounded-full bg-brand-gold hover:bg-brand-gold-light text-brand-charcoal font-semibold"
+                  className="w-full h-11 rounded-full bg-brand-gold hover:bg-brand-gold-light text-brand-charcoal font-semibold"
                 >
                   <a href={MEGATIX_URL}>Get Ticket</a>
                 </Button>
