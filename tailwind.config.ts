@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss";
 
-// ponytail: palette matches code.html reference 1:1. Swap for IDN Global's
-// real brand colors once client confirms (see planning doc §10).
+// Palette sampled from IDN Global Proposal 2026. gold-dark is for gold text on light backgrounds (contrast).
 const config: Config = {
   darkMode: ["class"],
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
@@ -9,11 +8,13 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          pink: "#FF4D6D",
-          coral: "#FA5252",
-          blue: "#1EA7FD",
-          navy: "#0E1726",
-          light: "#F8F9FA",
+          charcoal: "#22241F",
+          ink: "#2E302A",
+          gold: "#D4AF37",
+          "gold-light": "#E3C45E",
+          "gold-dark": "#8A6A14",
+          khaki: "#A38F62",
+          cream: "#F7F4EC",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

@@ -67,10 +67,10 @@ export default function Agenda() {
   }, []);
 
   return (
-    <section className="py-24 bg-gray-50" id="agenda">
+    <section className="py-24 bg-brand-cream" id="agenda">
       <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-16">
-          <span className="text-sm font-bold tracking-widest text-brand-coral uppercase">
+          <span className="text-sm font-bold tracking-widest text-brand-gold-dark uppercase">
             Monday, October 12, 2026
           </span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mt-2">
@@ -94,7 +94,7 @@ export default function Agenda() {
                     isLeft ? "md:mr-auto" : "md:ml-auto"
                   } ${visible[i] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
                 >
-                  <span className="inline-block bg-brand-coral text-white text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
+                  <span className="inline-block bg-brand-charcoal text-brand-gold text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
                     {session.time}
                   </span>
                   <h4 className="font-bold text-gray-900 text-base mb-2">
@@ -117,7 +117,7 @@ export default function Agenda() {
 
           <div className="text-center mt-12">
             <a
-              className="inline-flex items-center px-7 py-3 rounded-full bg-brand-blue hover:bg-sky-500 text-white text-sm font-semibold shadow transition"
+              className="inline-flex items-center px-7 py-3 rounded-full bg-brand-gold hover:bg-brand-gold-light text-brand-charcoal text-sm font-semibold shadow transition"
               href="/register"
             >
               Book A Seat <i className="fa-solid fa-arrow-right ml-2"></i>
@@ -127,7 +127,7 @@ export default function Agenda() {
 
         <div
           ref={pdfRef}
-          className={`mt-16 bg-gradient-to-r from-brand-coral to-red-400 rounded-2xl p-10 text-center text-white shadow-lg transition-all duration-[400ms] ease-out ${
+          className={`mt-16 bg-gradient-to-r from-brand-charcoal via-brand-charcoal to-brand-gold-dark rounded-2xl p-10 text-center text-white shadow-lg transition-all duration-[400ms] ease-out ${
             pdfVisible ? "opacity-100 scale-y-100" : "opacity-0 scale-y-[0.15]"
           }`}
         >
@@ -137,7 +137,7 @@ export default function Agenda() {
             as PDF
           </h3>
           <a
-            className="inline-flex items-center px-7 py-2.5 bg-brand-blue hover:bg-sky-500 rounded-full text-sm font-semibold text-white mt-2 transition"
+            className="inline-flex items-center px-7 py-2.5 bg-brand-gold hover:bg-brand-gold-light rounded-full text-sm font-semibold text-brand-charcoal mt-2 transition"
             href="#"
           >
             Download Now <i className="fa-solid fa-download ml-2 text-xs"></i>

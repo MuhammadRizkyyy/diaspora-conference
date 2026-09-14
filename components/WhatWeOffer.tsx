@@ -25,9 +25,9 @@ export default function WhatWeOffer() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 bg-gray-50 border-t border-gray-100">
+    <section ref={sectionRef} className="py-24 bg-white border-t border-brand-gold/20">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <span className="text-sm font-bold tracking-widest text-brand-coral uppercase">Features</span>
+        <span className="text-sm font-bold tracking-widest text-brand-gold-dark uppercase">Features</span>
         <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mt-2 mb-16">What We Offer?</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {FEATURES.map((f, i) => (
@@ -38,7 +38,7 @@ export default function WhatWeOffer() {
               }`}
               style={{ transitionDelay: visible ? `${i * 150}ms` : "0ms" }}
             >
-              <div className="w-16 h-16 rounded-full bg-red-50 text-brand-coral flex items-center justify-center mb-5 text-2xl">
+              <div className="w-16 h-16 rounded-full bg-brand-charcoal text-brand-gold flex items-center justify-center mb-5 text-2xl">
                 <i className={`fa-solid ${f.icon}`}></i>
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">{f.title}</h3>

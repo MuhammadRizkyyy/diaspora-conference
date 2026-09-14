@@ -67,8 +67,8 @@ function FaqItem({
       open={defaultOpen}
     >
       <summary className="flex justify-between items-center cursor-pointer list-none">
-        <span className="text-sm font-bold text-brand-coral">{q}</span>
-        <span className="text-brand-coral font-bold text-lg group-open:rotate-45 transition">+</span>
+        <span className="text-sm font-bold text-brand-gold-dark">{q}</span>
+        <span className="text-brand-gold-dark font-bold text-lg group-open:rotate-45 transition">+</span>
       </summary>
       <p className="text-sm text-gray-500 leading-relaxed mt-4">{a}</p>
     </details>
@@ -81,7 +81,7 @@ export default function Contact() {
   const col2 = useReveal<HTMLDivElement>();
 
   return (
-    <section className="py-24 bg-gray-50" id="contact">
+    <section className="py-24 bg-brand-cream" id="contact">
       <div className="max-w-5xl mx-auto px-6">
         <div
           ref={header.ref}
@@ -89,7 +89,7 @@ export default function Contact() {
             header.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="text-sm font-bold tracking-widest text-brand-coral uppercase">Questions &amp; Answers</span>
+          <span className="text-sm font-bold tracking-widest text-brand-gold-dark uppercase">Questions &amp; Answers</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mt-2">Mostly Asked Questions</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">

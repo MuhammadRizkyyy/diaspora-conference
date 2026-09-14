@@ -31,13 +31,13 @@ export default function About() {
             <div
               className="absolute bottom-0 left-0 w-24 h-24"
               style={{
-                backgroundImage: "radial-gradient(#0E1726 1.5px, transparent 1.5px)",
+                backgroundImage: "radial-gradient(#22241F 1.5px, transparent 1.5px)",
                 backgroundSize: "10px 10px",
               }}
             ></div>
 
             {/* arch shape */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[75%] h-[85%] bg-brand-coral rounded-t-full"></div>
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[75%] h-[85%] bg-brand-gold rounded-t-full"></div>
 
             {/* photo, cropped bust, sitting on the arch */}
             <img
@@ -48,24 +48,24 @@ export default function About() {
 
             {/* decorative shapes */}
             <div
-              className="absolute top-6 left-2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-r-[16px] border-r-brand-coral"
+              className="absolute top-6 left-2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-r-[16px] border-r-brand-gold"
               style={{ transform: "rotate(180deg)" }}
             ></div>
-            <div className="absolute top-14 left-16 w-6 h-6 border-2 border-brand-blue"></div>
-            <div className="absolute top-24 right-4 text-brand-blue text-4xl">
+            <div className="absolute top-14 left-16 w-6 h-6 border-2 border-brand-charcoal"></div>
+            <div className="absolute top-24 right-4 text-brand-charcoal text-4xl">
               <i className="fa-solid fa-bullhorn"></i>
             </div>
-            <div className="absolute top-1/2 right-0 w-3 h-6 border-2 border-brand-blue rounded-r-full"></div>
+            <div className="absolute top-1/2 right-0 w-3 h-6 border-2 border-brand-charcoal rounded-r-full"></div>
             <div
-              className="absolute bottom-16 right-6 w-0 h-0 border-t-[9px] border-t-transparent border-b-[9px] border-b-transparent border-l-[14px] border-l-brand-blue"
+              className="absolute bottom-16 right-6 w-0 h-0 border-t-[9px] border-t-transparent border-b-[9px] border-b-transparent border-l-[14px] border-l-brand-charcoal"
             ></div>
-            <div className="absolute bottom-4 right-16 w-4 h-4 bg-brand-coral rounded-full"></div>
-            <div className="absolute bottom-2 right-24 w-6 h-6 border-2 border-brand-coral rounded-full"></div>
+            <div className="absolute bottom-4 right-16 w-4 h-4 bg-brand-gold rounded-full"></div>
+            <div className="absolute bottom-2 right-24 w-6 h-6 border-2 border-brand-gold rounded-full"></div>
           </div>
         </div>
 
         <div className="lg:col-span-6 text-left">
-          <span className="text-sm font-bold tracking-widest text-brand-coral uppercase">The Story</span>
+          <span className="text-sm font-bold tracking-widest text-brand-gold-dark uppercase">The Story</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mt-2 mb-6">About Event</h2>
           <p className="text-gray-500 text-base leading-relaxed mb-8">
             The 1st Indonesian Diaspora Business Summit 2026 brings together Indonesian diaspora from 20+ countries
@@ -78,7 +78,7 @@ export default function About() {
             up to 1000 registrants with a projection of 200+ diaspora delegates from 20+ countries.
           </p>
           <a
-            className="inline-flex items-center px-7 py-3.5 rounded-lg bg-sky-400 hover:bg-sky-500 text-brand-navy text-base font-semibold transition"
+            className="inline-flex items-center px-7 py-3.5 rounded-lg bg-brand-gold hover:bg-brand-gold-light text-brand-charcoal text-base font-semibold transition"
             href="#agenda"
           >
             Get Ticket

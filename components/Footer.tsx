@@ -19,34 +19,34 @@ export default function Footer() {
           </p>
           <ul className="text-sm text-gray-600 space-y-3">
             <li className="flex items-center gap-2">
-              <i className="fa-solid fa-location-dot text-brand-coral"></i> Pacific Place, SCBD, South Jakarta
+              <i className="fa-solid fa-location-dot text-brand-gold-dark"></i> Pacific Place, SCBD, South Jakarta
             </li>
             <li className="flex items-center gap-2">
-              <i className="fa-brands fa-whatsapp text-brand-coral"></i> +62 8xx-xxxx-xxxx (Committee WhatsApp)
+              <i className="fa-brands fa-whatsapp text-brand-gold-dark"></i> +62 8xx-xxxx-xxxx (Committee WhatsApp)
             </li>
             <li className="flex items-center gap-2">
-              <i className="fa-solid fa-envelope text-brand-coral"></i> info@idnpreneurglobal.org
+              <i className="fa-solid fa-envelope text-brand-gold-dark"></i> info@idnpreneurglobal.org
             </li>
             <li className="flex items-center gap-2">
-              <i className="fa-solid fa-globe text-brand-coral"></i> www.diasporaindonesia.org
+              <i className="fa-solid fa-globe text-brand-gold-dark"></i> www.diasporaindonesia.org
             </li>
           </ul>
         </div>
       </div>
 
-      <div className="bg-gradient-to-r from-pink-100 via-purple-50 to-sky-100 text-center">
+      <div className="bg-brand-charcoal border-b-8 border-brand-gold text-center">
         <div className="max-w-4xl mx-auto px-6 py-14 flex flex-col items-center">
-          <nav className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-xs font-bold uppercase tracking-wide text-gray-600">
-            <a className="hover:text-brand-coral transition" href="#home">Home</a>
-            <a className="hover:text-brand-coral transition" href="#about">About</a>
-            <a className="hover:text-brand-coral transition" href="#speakers">Speakers</a>
-            <a className="hover:text-brand-coral transition" href="#agenda">Agenda</a>
-            <a className="hover:text-brand-coral transition" href="#packages">Pricing</a>
-            <a className="hover:text-brand-coral transition" href="#contact">Contact</a>
+          <nav className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-xs font-bold uppercase tracking-wide text-white/70">
+            <a className="hover:text-brand-gold transition" href="#home">Home</a>
+            <a className="hover:text-brand-gold transition" href="#about">About</a>
+            <a className="hover:text-brand-gold transition" href="#speakers">Speakers</a>
+            <a className="hover:text-brand-gold transition" href="#agenda">Agenda</a>
+            <a className="hover:text-brand-gold transition" href="#packages">Pricing</a>
+            <a className="hover:text-brand-gold transition" href="#contact">Contact</a>
           </nav>
 
-          <div className="w-full border-t border-gray-300/60 mt-8 pt-10">
-            <a className="flex items-center justify-center gap-2.5 text-brand-navy" href="#home">
+          <div className="w-full border-t border-white/10 mt-8 pt-10">
+            <a className="flex items-center justify-center gap-2.5 text-white" href="#home">
               <Image src={`${basePath}/logo.png`} alt="IDN Diaspora Business Summit" width={36} height={36} className="shrink-0" />
               <span className="leading-tight text-left font-black text-base tracking-tight">
                 IDN Diaspora
@@ -57,20 +57,20 @@ export default function Footer() {
 
             <div className="flex justify-center gap-3 mt-6">
               <a
-                className="w-10 h-10 rounded-md bg-sky-400 hover:bg-sky-500 text-white flex items-center justify-center text-sm transition"
+                className="w-10 h-10 rounded-md bg-brand-gold hover:bg-brand-gold-light text-brand-charcoal flex items-center justify-center text-sm transition"
                 href="#"
               >
                 <i className="fa-brands fa-linkedin-in"></i>
               </a>
               <a
-                className="w-10 h-10 rounded-md bg-sky-400 hover:bg-sky-500 text-white flex items-center justify-center text-sm transition"
+                className="w-10 h-10 rounded-md bg-brand-gold hover:bg-brand-gold-light text-brand-charcoal flex items-center justify-center text-sm transition"
                 href="#"
               >
                 <i className="fa-brands fa-instagram"></i>
               </a>
             </div>
 
-            <p className="text-[11px] text-gray-500 mt-6">
+            <p className="text-[11px] text-white/50 mt-6">
               &copy; 2026 IDN-Preneur Global Network &amp; IDN Global. All Rights Reserved.
             </p>
           </div>

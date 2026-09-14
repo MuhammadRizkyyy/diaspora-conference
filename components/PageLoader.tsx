@@ -27,7 +27,7 @@ export default function PageLoader() {
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
-      <div className="w-16 h-16 rounded-full border-4 border-t-brand-coral border-r-transparent border-b-brand-coral border-l-transparent animate-spin" />
+      <div className="w-16 h-16 rounded-full border-4 border-t-brand-gold border-r-transparent border-b-brand-gold border-l-transparent animate-spin" />
     </div>
   );
 }

@@ -7,14 +7,14 @@ export default function Hero() {
         <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight leading-tight mb-4 uppercase max-w-5xl">
           The 1st Indonesian Diaspora Business Summit 2026
         </h1>
-        <p className="text-lg md:text-xl font-bold tracking-wide mb-8 text-brand-navy">
+        <p className="text-lg md:text-xl font-bold tracking-wide mb-8 text-brand-gold">
           October 12, 2026 In The Ritz-Carlton Jakarta, Pacific Place
         </p>
 
         <Countdown />
 
         <a
-          className="inline-block px-9 py-3.5 rounded-full bg-brand-coral hover:bg-red-500 font-semibold text-base shadow-md transition"
+          className="inline-block px-9 py-3.5 rounded-full bg-brand-gold hover:bg-brand-gold-light text-brand-charcoal font-semibold text-base shadow-md transition"
           href="#agenda"
         >
           Get Ticket <i className="fa-solid fa-arrow-right ml-1.5 text-sm"></i>

@@ -26,12 +26,12 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-colors ${
-        scrolled ? "bg-white shadow-sm" : "bg-transparent"
+        scrolled ? "bg-brand-charcoal shadow-sm" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
         <Link
-          className="flex items-center gap-2.5 text-brand-navy"
+          className="flex items-center gap-2.5 text-white"
           href="#home"
         >
           <Image
@@ -48,11 +48,11 @@ export default function Header() {
             Business Summit
           </span>
         </Link>
-        <nav className="hidden md:flex items-center gap-8 text-sm font-semibold text-brand-navy">
+        <nav className="hidden md:flex items-center gap-8 text-sm font-semibold text-white">
           {NAV.map((item) => (
             <a
               key={item.href}
-              className="hover:text-brand-coral transition"
+              className="hover:text-brand-gold transition"
               href={item.href}
             >
               {item.label}
@@ -61,7 +61,7 @@ export default function Header() {
         </nav>
         <div>
           <Link
-            className="inline-flex items-center px-6 py-2.5 rounded-full bg-brand-coral hover:bg-red-500 text-white text-sm font-semibold shadow-lg transition duration-200"
+            className="inline-flex items-center px-6 py-2.5 rounded-full bg-brand-gold hover:bg-brand-gold-light text-brand-charcoal text-sm font-semibold shadow-lg transition duration-200"
             href="/register"
           >
             Join Now <i className="fa-solid fa-arrow-right ml-2 text-xs"></i>

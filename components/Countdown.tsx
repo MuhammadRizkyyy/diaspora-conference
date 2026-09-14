@@ -37,10 +37,10 @@ export default function Countdown() {
       {units.map((unit) => (
         <div
           key={unit.label}
-          className="bg-white/40 backdrop-blur-md rounded-xl py-4 px-3 border border-white/50 shadow-sm"
+          className="bg-white/10 backdrop-blur-md rounded-xl py-4 px-3 border border-brand-gold/40 shadow-sm"
         >
-          <span className="block text-3xl md:text-4xl font-black text-brand-coral">{unit.value}</span>
-          <span className="text-sm md:text-base font-semibold text-brand-navy">{unit.label}</span>
+          <span className="block text-3xl md:text-4xl font-black text-brand-gold">{unit.value}</span>
+          <span className="text-sm md:text-base font-semibold text-white/80">{unit.label}</span>
         </div>
       ))}
     </div>

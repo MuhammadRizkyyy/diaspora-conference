@@ -38,7 +38,7 @@ export default function Sponsors() {
   const cta = useReveal<HTMLAnchorElement>();
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-brand-khaki">
       <div className="max-w-5xl mx-auto px-6 text-center">
         <div
           ref={header.ref}
@@ -46,15 +46,15 @@ export default function Sponsors() {
             header.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="text-sm font-bold tracking-widest text-brand-coral uppercase">For Company & Institution</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mt-2 mb-12">Sponsorship Tier</h2>
+          <span className="text-sm font-bold tracking-widest text-brand-charcoal uppercase">For Company & Institution</span>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mt-2 mb-12">Sponsorship Tier</h2>
         </div>
 
         <div ref={row1.ref} className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center mb-6">
           {TIERS_ROW1.map((t, i) => (
             <div
               key={t.label}
-              className={`bg-gray-50 py-5 px-7 rounded-md flex items-center justify-center gap-2 text-sky-500 font-bold text-base shadow-sm transition-all duration-700 ease-out ${
+              className={`bg-white/90 py-5 px-7 rounded-md flex items-center justify-center gap-2 text-brand-gold-dark font-bold text-base shadow-sm transition-all duration-700 ease-out ${
                 row1.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: row1.visible ? `${i * 150}ms` : "0ms" }}
@@ -68,7 +68,7 @@ export default function Sponsors() {
           {TIERS_ROW2.map((t, i) => (
             <div
               key={t.label}
-              className={`bg-gray-50 py-4 px-7 rounded-md flex items-center justify-center gap-2 text-amber-500 font-bold text-base shadow-sm transition-all duration-700 ease-out ${
+              className={`bg-white/90 py-4 px-7 rounded-md flex items-center justify-center gap-2 text-brand-charcoal font-bold text-base shadow-sm transition-all duration-700 ease-out ${
                 row2.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: row2.visible ? `${i * 150}ms` : "0ms" }}
@@ -81,7 +81,7 @@ export default function Sponsors() {
         <a
           ref={cta.ref}
           href="#contact"
-          className={`inline-block px-9 py-3.5 bg-brand-coral hover:bg-red-500 text-white rounded-full text-sm font-semibold shadow transition ${
+          className={`inline-block px-9 py-3.5 bg-brand-charcoal hover:bg-brand-ink text-brand-gold rounded-full text-sm font-semibold shadow transition ${
             cta.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
           style={{ transitionProperty: "background-color, opacity, transform", transitionDuration: "700ms" }}

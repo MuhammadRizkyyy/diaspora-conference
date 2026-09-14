@@ -27,10 +27,20 @@
   * {
     @apply border-border;
   }
+
+  html {
+    scroll-padding-top: 5rem;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
 }
 
 .hero-bg {
-  background: linear-gradient(135deg, rgba(30, 167, 253, 0.75) 0%, rgba(255, 77, 109, 0.8) 100%),
+  background: linear-gradient(135deg, rgba(34, 36, 31, 0.92) 0%, rgba(34, 36, 31, 0.78) 60%, rgba(138, 106, 20, 0.7) 100%),
     url("https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1920&q=80");
   background-size: cover;
   background-position: center;
@@ -41,7 +51,7 @@
   top: 100%;
   width: 140px;
   height: 6px;
-  background: #fa5252;
+  background: #d4af37;
   box-shadow: 0 1px 4px rgba(15, 23, 42, 0.12);
   transform-origin: 0 0;
   pointer-events: none;
