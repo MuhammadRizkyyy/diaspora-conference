@@ -3,7 +3,7 @@ import { basePath } from "@/lib/utils";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gray-100">
+    <footer className="relative bg-gray-100" id="contact">
       <div className="relative h-[480px] w-full bg-gray-200 overflow-hidden flex items-center justify-center">
         <iframe
           className="absolute inset-0 w-full h-full border-0"

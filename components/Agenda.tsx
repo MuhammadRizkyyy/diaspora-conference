@@ -33,19 +33,6 @@ const SESSIONS = [
 export default function Agenda() {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [visible, setVisible] = useState<boolean[]>(() => SESSIONS.map(() => false));
-  const pdfRef = useRef<HTMLDivElement>(null);
-  const [pdfVisible, setPdfVisible] = useState(false);
-
-  useEffect(() => {
-    const el = pdfRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(([entry]) => setPdfVisible(entry.isIntersecting), {
-      threshold: 0.15,
-      rootMargin: "0px 0px -10% 0px",
-    });
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -123,25 +110,6 @@ export default function Agenda() {
               Book A Seat <i className="fa-solid fa-arrow-right ml-2"></i>
             </a>
           </div>
-        </div>
-
-        <div
-          ref={pdfRef}
-          className={`mt-16 bg-gradient-to-r from-brand-charcoal via-brand-charcoal to-brand-gold-dark rounded-2xl p-10 text-center text-white shadow-lg transition-all duration-[400ms] ease-out ${
-            pdfVisible ? "opacity-100 scale-y-100" : "opacity-0 scale-y-[0.15]"
-          }`}
-        >
-          <h3 className="text-3xl md:text-4xl font-bold mb-4">
-            Download Events Schedule
-            <br />
-            as PDF
-          </h3>
-          <a
-            className="inline-flex items-center px-7 py-2.5 bg-brand-gold hover:bg-brand-gold-light rounded-full text-sm font-semibold text-brand-charcoal mt-2 transition"
-            href="#"
-          >
-            Download Now <i className="fa-solid fa-download ml-2 text-xs"></i>
-          </a>
         </div>
       </div>
     </section>

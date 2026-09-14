@@ -6,7 +6,6 @@ import Agenda from "@/components/Agenda";
 import { GrowthPlans } from "@/components/GrowthPlans";
 import Speakers from "@/components/Speakers";
 import Sponsors from "@/components/Sponsors";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -20,7 +19,6 @@ export default function Home() {
       <GrowthPlans />
       <Speakers />
       <Sponsors />
-      <Contact />
       <Footer />
     </>
   );
