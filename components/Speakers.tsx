@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { basePath } from "@/lib/utils";
 
 const SPEAKERS = [
   {
@@ -131,7 +132,7 @@ export default function Speakers() {
             >
               <img
                 alt={speaker.name}
-                src={encodeURI(speaker.photo)}
+                src={encodeURI(`${basePath}${speaker.photo}`)}
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
