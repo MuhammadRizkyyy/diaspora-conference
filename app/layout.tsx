@@ -7,7 +7,7 @@ import WelcomeModal from "@/components/WelcomeModal";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "1st Indonesian Diaspora Business Summit 2026",
+  title: "IDN Diaspora Business Summit 2026",
   description:
     "The 1st Indonesian Diaspora Business Summit 2026 — October 12, 2026, The Ritz-Carlton Jakarta, Pacific Place. Organized by IDN-Preneur Global Network together with IDN Global.",
 };

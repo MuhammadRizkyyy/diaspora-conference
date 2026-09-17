@@ -17,12 +17,30 @@ const NAV = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeHref, setActiveHref] = useState("#home");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     onScroll();
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const sections = NAV.map((item) => document.getElementById(item.href.slice(1))).filter(
+      (el): el is HTMLElement => el !== null,
+    );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((e) => e.isIntersecting);
+        if (visible.length === 0) return;
+        const top = visible.reduce((a, b) => (a.boundingClientRect.top < b.boundingClientRect.top ? a : b));
+        setActiveHref(`#${top.target.id}`);
+      },
+      { rootMargin: "-45% 0px -45% 0px" },
+    );
+    sections.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -58,7 +76,9 @@ export default function Header() {
           {NAV.map((item) => (
             <a
               key={item.href}
-              className="hover:text-brand-gold transition"
+              className={`transition hover:text-brand-gold ${
+                activeHref === item.href ? "text-brand-gold" : ""
+              }`}
               href={item.href}
             >
               {item.label}
@@ -88,7 +108,9 @@ export default function Header() {
           {NAV.map((item) => (
             <a
               key={item.href}
-              className="py-2.5 border-b border-white/10 hover:text-brand-gold transition"
+              className={`py-2.5 border-b border-white/10 transition hover:text-brand-gold ${
+                activeHref === item.href ? "text-brand-gold" : ""
+              }`}
               href={item.href}
               onClick={() => setMenuOpen(false)}
             >
