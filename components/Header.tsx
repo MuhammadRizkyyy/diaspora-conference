@@ -29,24 +29,24 @@ export default function Header() {
         scrolled ? "bg-brand-charcoal shadow-sm" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-        <Link className="flex items-center gap-2.5 text-white" href="#home">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6 flex items-center justify-between gap-2">
+        <Link className="flex items-center gap-1.5 sm:gap-2.5 text-white min-w-0" href="#home">
           <Image
             src={`${basePath}/logo.png`}
             alt="IDN Diaspora Business Summit"
             width={36}
             height={36}
-            className="shrink-0"
+            className="shrink-0 w-7 h-7 sm:w-9 sm:h-9"
           />
           <Image
             src={`${basePath}/logo2.png`}
             alt=""
             width={27}
             height={36}
-            className="shrink-0"
+            className="shrink-0 w-[21px] h-7 sm:w-[27px] sm:h-9"
           />
 
-          <span className="leading-tight text-left font-black text-base tracking-tight">
+          <span className="leading-tight text-left font-black text-xs sm:text-base tracking-tight truncate">
             IDN Diaspora
             <br />
             Business Summit
@@ -63,12 +63,12 @@ export default function Header() {
             </a>
           ))}
         </nav>
-        <div>
+        <div className="shrink-0">
           <Link
-            className="inline-flex items-center px-6 py-2.5 rounded-full bg-brand-gold hover:bg-brand-gold-light text-brand-charcoal text-sm font-semibold shadow-lg transition duration-200"
+            className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-2.5 rounded-full bg-brand-gold hover:bg-brand-gold-light text-brand-charcoal text-xs sm:text-sm font-semibold shadow-lg transition duration-200 whitespace-nowrap"
             href="#packages"
           >
-            Join Now <i className="fa-solid fa-arrow-right ml-2 text-xs"></i>
+            Join Now <i className="fa-solid fa-arrow-right ml-1.5 sm:ml-2 text-xs"></i>
           </Link>
         </div>
       </div>

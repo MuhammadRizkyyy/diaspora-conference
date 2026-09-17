@@ -33,14 +33,14 @@ export default function Countdown() {
   ];
 
   return (
-    <div className="grid grid-cols-4 gap-4 md:gap-6 mb-8 w-full max-w-xl">
+    <div className="grid grid-cols-4 gap-2 sm:gap-4 md:gap-6 mb-8 w-full max-w-xl">
       {units.map((unit) => (
         <div
           key={unit.label}
-          className="bg-white/10 backdrop-blur-md rounded-xl py-4 px-3 border border-brand-gold/40 shadow-sm"
+          className="bg-white/10 backdrop-blur-md rounded-xl py-3 sm:py-4 px-1.5 sm:px-3 border border-brand-gold/40 shadow-sm"
         >
-          <span className="block text-3xl md:text-4xl font-black text-brand-gold">{unit.value}</span>
-          <span className="text-sm md:text-base font-semibold text-white/80">{unit.label}</span>
+          <span className="block text-2xl sm:text-3xl md:text-4xl font-black text-brand-gold">{unit.value}</span>
+          <span className="text-xs sm:text-sm md:text-base font-semibold text-white/80">{unit.label}</span>
         </div>
       ))}
     </div>
