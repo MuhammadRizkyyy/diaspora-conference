@@ -30,14 +30,18 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-        <Link
-          className="flex items-center gap-2.5 text-white"
-          href="#home"
-        >
+        <Link className="flex items-center gap-2.5 text-white" href="#home">
           <Image
             src={`${basePath}/logo.png`}
             alt="IDN Diaspora Business Summit"
             width={36}
+            height={36}
+            className="shrink-0"
+          />
+          <Image
+            src={`${basePath}/logo2.png`}
+            alt=""
+            width={27}
             height={36}
             className="shrink-0"
           />
