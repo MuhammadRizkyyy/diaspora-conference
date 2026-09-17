@@ -10,19 +10,31 @@ const FEATURES = [
   "Gala Dinner & Networking Access",
 ];
 
+const SEEN_KEY = "welcome-modal-seen";
+
 export default function WelcomeModal() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
+    try {
+      if (localStorage.getItem(SEEN_KEY)) return;
+    } catch {}
     setOpen(true);
   }, []);
+
+  const close = () => {
+    setOpen(false);
+    try {
+      localStorage.setItem(SEEN_KEY, "1");
+    } catch {}
+  };
 
   if (!open) return null;
 
   return (
     <div
       className="fixed inset-0 z-[200] flex items-center justify-center bg-black/60 p-4"
-      onClick={() => setOpen(false)}
+      onClick={close}
     >
       <div
         className="relative w-full max-w-sm rounded-2xl bg-gradient-to-b from-brand-charcoal to-brand-ink border border-brand-gold/40 p-8 text-center shadow-2xl"
@@ -31,7 +43,7 @@ export default function WelcomeModal() {
         <button
           aria-label="Close"
           className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-brand-charcoal"
-          onClick={() => setOpen(false)}
+          onClick={close}
         >
           <i className="fa-solid fa-xmark"></i>
         </button>
@@ -57,7 +69,7 @@ export default function WelcomeModal() {
 
         <a
           href="#packages"
-          onClick={() => setOpen(false)}
+          onClick={close}
           className="mb-4 flex w-full items-center justify-center gap-2 rounded-full bg-brand-gold py-4 text-base font-bold text-brand-charcoal transition hover:bg-brand-gold-light"
         >
           REGISTER NOW <i className="fa-solid fa-arrow-right"></i>
@@ -65,7 +77,7 @@ export default function WelcomeModal() {
 
         <button
           className="text-sm text-white/70 underline"
-          onClick={() => setOpen(false)}
+          onClick={close}
         >
           No thanks
         </button>
