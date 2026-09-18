@@ -22,10 +22,16 @@ export default function Footer() {
               <i className="fa-solid fa-location-dot text-brand-gold-dark"></i> Pacific Place, SCBD, South Jakarta
             </li>
             <li className="flex items-center gap-2">
-              <i className="fa-brands fa-whatsapp text-brand-gold-dark"></i> +62 8xx-xxxx-xxxx (Committee WhatsApp)
+              <i className="fa-brands fa-whatsapp text-brand-gold-dark"></i>
+              <a className="hover:text-brand-gold-dark transition" href="https://wa.me/6281289823800" target="_blank" rel="noopener noreferrer">
+                +62812 8982 3800 (Committee WhatsApp)
+              </a>
             </li>
             <li className="flex items-center gap-2">
-              <i className="fa-solid fa-envelope text-brand-gold-dark"></i> info@idnpreneurglobal.org
+              <i className="fa-solid fa-envelope text-brand-gold-dark"></i>
+              <a className="hover:text-brand-gold-dark transition" href="mailto:sekretariat@diasporaindonesia.org">
+                sekretariat@diasporaindonesia.org
+              </a>
             </li>
             <li className="flex items-center gap-2">
               <i className="fa-solid fa-globe text-brand-gold-dark"></i> www.diasporaindonesia.org
@@ -48,27 +54,13 @@ export default function Footer() {
           <div className="w-full border-t border-white/10 mt-8 pt-10">
             <a className="flex items-center justify-center gap-2.5 text-white" href="#home">
               <Image src={`${basePath}/logo.png`} alt="IDN Diaspora Business Summit" width={36} height={36} className="shrink-0" />
+              <Image src={`${basePath}/logo2.png`} alt="" width={27} height={36} className="shrink-0" />
               <span className="leading-tight text-left font-black text-base tracking-tight">
                 IDN Diaspora
                 <br />
                 Business Summit
               </span>
             </a>
-
-            <div className="flex justify-center gap-3 mt-6">
-              <a
-                className="w-10 h-10 rounded-md bg-brand-gold hover:bg-brand-gold-light text-brand-charcoal flex items-center justify-center text-sm transition"
-                href="#"
-              >
-                <i className="fa-brands fa-linkedin-in"></i>
-              </a>
-              <a
-                className="w-10 h-10 rounded-md bg-brand-gold hover:bg-brand-gold-light text-brand-charcoal flex items-center justify-center text-sm transition"
-                href="#"
-              >
-                <i className="fa-brands fa-instagram"></i>
-              </a>
-            </div>
 
             <p className="text-[11px] text-white/50 mt-6">
               &copy; 2026 IDN-Preneur Global Network &amp; IDN Global. All Rights Reserved.
