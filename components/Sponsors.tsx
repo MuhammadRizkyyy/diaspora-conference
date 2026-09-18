@@ -1,16 +1,50 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Check } from "lucide-react";
 
 const TIERS_ROW1 = [
-  { icon: "fa-gem", label: "Platinum · Rp 500 Jt" },
-  { icon: "fa-shapes", label: "Gold · Rp 250 Jt" },
-  { icon: "fa-shield", label: "Silver · Rp 100 Jt" },
-];
-
-const TIERS_ROW2 = [
-  { icon: "fa-users", label: "Corporate 10 Pax · Rp 100 Jt" },
-  { icon: "fa-user-group", label: "Corporate 5 Pax · Rp 50 Jt" },
+  {
+    icon: "fa-gem",
+    name: "Platinum",
+    price: "Rp 500.000.000",
+    featured: true,
+    benefits: [
+      "5 VIP seats at the Summit and Gala Dinner, seated with Indonesian government representatives. Seating will be arranged by the committee, with a limit of 2 representatives per company at each VIP table",
+      "One corporate representative to join as a speaker in one dialogue session",
+      "Company profile on the main backdrop and photobooth",
+      "Credit title during the opening and closing of the event",
+      "Company name mentioned by the MC at the opening and closing",
+      "Access to the VIP room",
+      "Premium logo placement across social media and all promotional materials, including flyers, booklet, e-flyers, and newsletter",
+    ],
+  },
+  {
+    icon: "fa-shapes",
+    name: "Gold",
+    price: "Rp 250.000.000",
+    featured: false,
+    benefits: [
+      "3 VIP seats at the Summit and Gala Dinner, seated with Indonesian government representatives. Seating will be arranged by the committee, with a limit of 2 representatives per company at each VIP table",
+      "Company profile on the main backdrop and photobooth",
+      "Credit title during the opening and closing of the event",
+      "Company name mentioned by the MC at the opening and closing",
+      "Access to the VIP room",
+      "Standard logo placement across social media and all promotional materials, including flyers, booklet, e-flyers, and newsletter",
+    ],
+  },
+  {
+    icon: "fa-shield",
+    name: "Silver",
+    price: "Rp 100.000.000",
+    featured: false,
+    benefits: [
+      "3 seats at the Summit and Gala Dinner",
+      "Company profile on the main backdrop and photobooth",
+      "Company name mentioned by the MC at the opening and closing",
+      "Logo placement across social media and all promotional materials",
+    ],
+  },
 ];
 
 function useReveal<T extends HTMLElement>(threshold = 0.1) {
@@ -34,54 +68,68 @@ function useReveal<T extends HTMLElement>(threshold = 0.1) {
 export default function Sponsors() {
   const header = useReveal<HTMLDivElement>();
   const row1 = useReveal<HTMLDivElement>();
-  const row2 = useReveal<HTMLDivElement>();
   const cta = useReveal<HTMLAnchorElement>();
 
   return (
-    <section className="py-20 bg-brand-khaki">
-      <div className="max-w-5xl mx-auto px-6 text-center">
+    <section className="py-24 bg-brand-charcoal">
+      <div className="max-w-6xl mx-auto px-6 text-center">
         <div
           ref={header.ref}
           className={`transition-all duration-700 ease-out ${
             header.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="text-sm font-bold tracking-widest text-brand-charcoal uppercase">For Company & Institution</span>
+          <span className="text-sm font-bold tracking-widest text-brand-gold uppercase">For Company & Institution</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-white mt-2 mb-12">Sponsorship Tier</h2>
         </div>
 
-        <div ref={row1.ref} className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center mb-6">
+        <div ref={row1.ref} className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-start mb-8 text-left">
           {TIERS_ROW1.map((t, i) => (
             <div
-              key={t.label}
-              className={`bg-white/90 py-5 px-7 rounded-md flex items-center justify-center gap-2 text-brand-gold-dark font-bold text-base shadow-sm transition-all duration-700 ease-out ${
-                row1.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
+              key={t.name}
+              className={`relative flex flex-col overflow-hidden rounded-2xl border bg-brand-ink transition-all duration-700 ease-out ${
+                t.featured ? "border-brand-gold shadow-2xl shadow-brand-gold/20 md:-translate-y-3" : "border-brand-gold/30 shadow-lg"
+              } ${row1.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               style={{ transitionDelay: row1.visible ? `${i * 150}ms` : "0ms" }}
             >
-              <i className={`fa-solid ${t.icon}`}></i> {t.label}
+              {t.featured && (
+                <span className="absolute top-3 right-3 z-10 text-[10px] font-bold tracking-wide uppercase bg-brand-gold text-brand-charcoal px-2.5 py-1 rounded-full">
+                  Most Popular
+                </span>
+              )}
+              <div className="bg-gradient-to-br from-brand-gold via-brand-gold-dark to-brand-charcoal px-6 pt-6 pb-6 text-center">
+                <div className="flex items-center justify-center gap-2 text-brand-gold font-extrabold text-lg md:text-xl uppercase tracking-wide">
+                  <i className={`fa-solid ${t.icon}`}></i> {t.name}
+                </div>
+                <div className="text-white font-black text-2xl md:text-3xl mt-2 tracking-tight">{t.price}</div>
+              </div>
+              <ul className="flex-1 px-6 py-6 space-y-3 text-sm leading-relaxed text-white/80">
+                {t.benefits.map((b) => (
+                  <li key={b} className="flex gap-2.5">
+                    <Check className="mt-0.5 size-4 shrink-0 text-brand-gold" />
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
+        <p className="text-xs text-white/50 italic mb-12 max-w-xl mx-auto">
+          All sponsorship packages include lunch, coffee break, and dinner for the allocated number of guests.
+        </p>
 
-        <div ref={row2.ref} className="flex flex-wrap justify-center gap-4 mb-12">
-          {TIERS_ROW2.map((t, i) => (
-            <div
-              key={t.label}
-              className={`bg-white/90 py-4 px-7 rounded-md flex items-center justify-center gap-2 text-brand-charcoal font-bold text-base shadow-sm transition-all duration-700 ease-out ${
-                row2.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
-              style={{ transitionDelay: row2.visible ? `${i * 150}ms` : "0ms" }}
-            >
-              <i className={`fa-solid ${t.icon}`}></i> {t.label}
-            </div>
-          ))}
+        <div className="text-center mb-10">
+          <p className="text-white font-bold text-base mb-1">For sponsorship inquiries, please contact:</p>
+          <p className="text-brand-gold font-semibold text-lg">+62821 2288 4430</p>
+          <p className="text-white/60 text-sm">(WhatsApp Available)</p>
         </div>
 
         <a
           ref={cta.ref}
-          href="#contact"
-          className={`inline-block px-9 py-3.5 bg-brand-charcoal hover:bg-brand-ink text-brand-gold rounded-full text-sm font-semibold shadow transition ${
+          href="https://wa.me/6282122884430"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`inline-block px-9 py-3.5 bg-brand-gold hover:bg-brand-gold-light text-brand-charcoal rounded-full text-sm font-semibold shadow transition ${
             cta.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
           style={{ transitionProperty: "background-color, opacity, transform", transitionDuration: "700ms" }}
