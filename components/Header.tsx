@@ -54,16 +54,16 @@ export default function Header() {
           <Image
             src={`${basePath}/logo.png`}
             alt="IDN Diaspora Business Summit"
-            width={36}
-            height={36}
-            className="shrink-0 w-7 h-7 sm:w-9 sm:h-9"
+            width={48}
+            height={48}
+            className="shrink-0 w-9 h-9 sm:w-12 sm:h-12"
           />
           <Image
             src={`${basePath}/logo2.png`}
             alt=""
-            width={27}
-            height={36}
-            className="shrink-0 w-[21px] h-7 sm:w-[27px] sm:h-9"
+            width={45}
+            height={60}
+            className="shrink-0 w-[34px] h-11 sm:w-[45px] sm:h-[60px]"
           />
 
           <span className="leading-tight text-left font-black text-xs sm:text-sm lg:text-base tracking-tight whitespace-nowrap">
